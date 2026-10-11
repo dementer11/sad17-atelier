@@ -26,11 +26,11 @@
   }
 
   function imagePath(product) {
-    if (typeof product.image !== 'string' || !product.image.startsWith('assets/demo/')) return '';
+    if (typeof product.image !== 'string' || !/^assets\/(demo|collection)\//.test(product.image)) return '';
     try {
       const url = new URL(product.image, document.baseURI);
-      const demoRoot = new URL('assets/demo/', document.baseURI);
-      return url.origin === window.location.origin && url.pathname.startsWith(demoRoot.pathname) ? url.href : '';
+      const roots = ['assets/demo/', 'assets/collection/'].map(path=>new URL(path,document.baseURI));
+      return url.origin === window.location.origin && roots.some(root=>url.pathname.startsWith(root.pathname)) ? url.href : '';
     } catch {
       return '';
     }
@@ -479,7 +479,7 @@
   });
   root.querySelector('[data-gift-download]').addEventListener('click', downloadCard);
 
-  fetch('products.json?v=sad17-1').then(response => {
+  fetch('products.json?v=rich-5').then(response => {
     if (!response.ok) throw new Error('Catalog unavailable');
     return response.json();
   }).then(data => {

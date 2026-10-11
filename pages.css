@@ -153,3 +153,4 @@ html[data-theme="light"] .prose-page { color-scheme: light; }
   .prose-main { width: min(100% - 34px, 760px); padding-top: 54px; }
   .prose-footer { align-items: flex-start; flex-direction: column; padding-inline: 17px; }
 }
+html, body { min-width: 0; }

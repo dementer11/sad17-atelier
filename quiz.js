@@ -2,60 +2,101 @@
   'use strict';
 
   const steps = ['mood', 'sugar', 'moment'];
-  const scoring = {
-    mood: {
-      classic: [
-        ['pastila-classic', 6, 'Яблочная классика для спокойного, знакомого вкуса.'],
-        ['pastila-cedar', 3, 'Яблочная основа дополнена кедровым орехом.'],
-        ['pastila-no-sugar', 2, 'Сдержанный яблочный вкус без добавления сахара.'],
-        ['zefir-antonovka', 1, 'Яблочная классика в более воздушной текстуре.']
-      ],
-      brightberry: [
-        ['pastila-cranberry', 6, 'Клюква добавляет яркий ягодный акцент.'],
-        ['pastila-berries-no-sugar', 5, 'Сразу несколько ягод собраны в одном сочетании.'],
-        ['pastila-cherry-no-sugar', 4, 'Вишня задаёт выразительную ягодную ноту.'],
-        ['smokva-cranberry', 3, 'Клюквенная смоква предлагает более плотную ягодную текстуру.']
-      ],
-      texture: [
-        ['smokva-cranberry', 6, 'Плотная фруктовая текстура заметно отличается от пастилы.'],
-        ['zefir-antonovka', 4, 'Воздушная текстура добавляет разнообразия.'],
-        ['pastila-cedar', 3, 'Кедровый орех добавляет интересный акцент.'],
-        ['pastila-cranberry', 1, 'Ягодная кислинка дополняет мягкую текстуру пастилы.']
-      ]
-    },
-    sugar: {
-      'no-added': [
-        ['pastila-no-sugar', 5, 'В названии указано: без добавления сахара.'],
-        ['pastila-cherry-no-sugar', 5, 'В названии указано: без добавления сахара.'],
-        ['pastila-berries-no-sugar', 5, 'В названии указано: без добавления сахара.'],
-        ['smokva-cranberry', 4, 'Клюквенная смоква представлена без добавления сахара.']
-      ],
-      any: []
-    },
-    moment: {
-      tea: [
-        ['pastila-classic', 3, 'Подойдёт к неспешной паузе с чаем.'],
-        ['pastila-cedar', 3, 'Ореховый акцент хорошо поддержит чаепитие.'],
-        ['zefir-antonovka', 3, 'Воздушный яблочный зефир — вариант к чаю.'],
-        ['pastila-cranberry', 2, 'Ягодная нота добавит чаепитию яркости.'],
-        ['pastila-no-sugar', 2, 'Яблочная пастила для паузы к чаю.']
-      ],
-      gift: [
-        ['pastila-cedar', 5, 'Необычный ореховый акцент для небольшого подарка.'],
-        ['pastila-berries-no-sugar', 3, 'Ягодное сочетание выглядит выразительно в подарок.'],
-        ['pastila-cranberry', 3, 'Яркая клюквенная нота для подарочного выбора.'],
-        ['zefir-antonovka', 2, 'Воздушный яблочный вариант для подарка.'],
-        ['pastila-classic', 2, 'Знакомая яблочная классика в подарок.']
-      ],
-      onroad: [
-        ['smokva-cranberry', 5, 'Небольшой формат удобно взять с собой.'],
-        ['pastila-no-sugar', 3, 'Компактный формат для короткой паузы в пути.'],
-        ['pastila-cherry-no-sugar', 3, 'Компактный формат для короткой паузы в пути.'],
-        ['pastila-berries-no-sugar', 3, 'Компактный формат для короткой паузы в пути.'],
-        ['pastila-cranberry', 1, 'Ягодная пастила для паузы в дороге.']
-      ]
+  function valueText(value) {
+    if (value == null) return '';
+    if (Array.isArray(value)) return value.map(valueText).filter(Boolean).join(' ');
+    if (typeof value === 'object') return Object.values(value).map(valueText).filter(Boolean).join(' ');
+    return String(value).toLowerCase();
+  }
+
+  function hasNoAddedSugar(product) {
+    return product.category === 'no-sugar' || product.noAddedSugar === true ||
+      /без добавления сахара/i.test(`${product.name || ''} ${valueText(product.ingredients)}`);
+  }
+
+  function weightInGrams(value) {
+    if (typeof value === 'number') return value;
+    const text = String(value || '').toLowerCase().replace(',', '.');
+    const match = text.match(/(?:всего|total)\s*:?\s*(\d+(?:\.\d+)?)\s*(кг|kg|г|гр|g)?/) ||
+      text.match(/(\d+(?:\.\d+)?)\s*(кг|kg|г|гр|g)?/);
+    if (!match) return null;
+    const amount = Number(match[1]);
+    return /кг|kg/.test(match[2] || '') ? amount * 1000 : amount;
+  }
+
+  function recommendProducts(products, answers) {
+    const eligibleProducts = answers.sugar === 'no-added'
+      ? products.filter(hasNoAddedSugar)
+      : products;
+    const ranked = eligibleProducts.map((product, order) => ({ product, score: 0, order, reasons: [] }));
+    const add = (entry, points, reason) => {
+      if (points <= 0) return;
+      entry.score += points;
+      if (reason && !entry.reasons.includes(reason)) entry.reasons.push(reason);
+    };
+
+    for (const entry of ranked) {
+      const product = entry.product;
+      const category = valueText(product.category);
+      const taste = valueText(product.taste);
+      const texture = valueText(product.texture);
+      const pairing = valueText(product.pairing);
+      const occasion = valueText(product.occasion);
+      const ingredients = valueText(product.ingredients);
+      const name = valueText(product.name);
+      const general = `${name} ${ingredients} ${valueText(product.description)}`;
+
+      if (answers.mood === 'classic') {
+        if (/classic|класс|традиц/.test(`${category} ${taste} ${name}`)) {
+          add(entry, category === 'classic' ? 7 : 5, 'Яблочная классика для спокойного, знакомого вкуса.');
+        } else if (/яблок|apple/.test(general)) {
+          add(entry, 2, 'Яблочная основа поддерживает спокойный, знакомый вкус.');
+        }
+      } else if (answers.mood === 'brightberry') {
+        const berryWords = /ягод|berry|клюкв|вишн|смород|брусник|черник|мали|ежев|облепих|cranber|cherr|currant|blueber|raspber/;
+        if (category === 'berries') add(entry, 6, 'Ягодная категория отвечает вашему яркому настроению.');
+        if (berryWords.test(`${taste} ${ingredients} ${name}`)) {
+          add(entry, 5, 'В составе или названии указаны ягоды с выразительной нотой.');
+        }
+        if (/bright|ярк|кисл|sour|tart/.test(taste)) add(entry, 2, 'Вкусовой профиль отмечен как яркий или с кислинкой.');
+      } else if (answers.mood === 'texture') {
+        if (texture) add(entry, 1, `В карточке отмечена текстура: ${texture}.`);
+        if (/хруст|ломк|жев|тянуч|кубик|свернут|рулет|crisp|brittle|chew|roll|cube/.test(texture)) {
+          add(entry, 7, 'У этого варианта особенно выразительная фактура.');
+        } else if (/плотн|упруг|воздуш|мягк|бархат|эласт|soft|dense|firm|airy/.test(texture)) {
+          add(entry, 3, 'Текстура добавляет коллекции интересный контраст.');
+        }
+        if (/texture|текстур/.test(`${category} ${taste}`)) add(entry, 3, 'В карточке отдельно отмечен акцент на текстуре.');
+      }
+
+      if (answers.sugar === 'no-added') {
+        const reason = product.category === 'no-sugar' || /без добавления сахара/i.test(product.name || '')
+          ? 'В названии или категории есть пометка «без добавления сахара».'
+          : 'В составе набора указаны позиции без добавления сахара.';
+        add(entry, 2, reason);
+      }
+
+      if (answers.moment === 'tea') {
+        if (/tea|чай|чаепит/.test(`${occasion} ${pairing}`)) {
+          add(entry, 6, 'Вариант отмечен для чаепития.');
+        } else if (/classic|класс|пастил/.test(`${category} ${name}`)) {
+          add(entry, 1, 'Формат яблочной пастилы подойдёт для паузы к чаю.');
+        }
+      } else if (answers.moment === 'gift') {
+        if (category === 'gifts' || category === 'gift') add(entry, 8, 'Товар входит в подарочную категорию.');
+        if (/gift|подар|набор|празд/.test(occasion)) add(entry, 5, 'В карточке этот вариант отмечен для подарка.');
+        if (/gift|подар|набор/.test(pairing)) add(entry, 3, 'Сочетание или формат подходит для подарочной подборки.');
+      } else if (answers.moment === 'onroad') {
+        const grams = weightInGrams(product.weight);
+        if (grams !== null && grams <= 100) add(entry, 5, `Компактный формат ${product.weight} удобно взять с собой.`);
+        if (/road|on.?road|дорог|путеше|с собой|travel|on.?the.?go/.test(`${occasion} ${pairing}`)) {
+          add(entry, 5, 'В карточке этот вариант отмечен для дороги.');
+        }
+      }
     }
-  };
+
+    return ranked.sort((left, right) => right.score - left.score || left.order - right.order).slice(0, 2);
+  }
 
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -115,7 +156,7 @@
       results.hidden = true;
       loadError.hidden = true;
       try {
-        const response = await fetch(new URL('products.json', document.baseURI), {
+        const response = await fetch(new URL('products.json?v=rich-5', document.baseURI), {
           headers: { Accept: 'application/json' }
         });
         if (!response.ok) throw new Error('Catalog unavailable');
@@ -147,25 +188,7 @@
     }
 
     function makeRecommendations() {
-      const eligibleProducts = state.answers.sugar === 'no-added'
-        ? state.products.filter(product => /без добавления сахара/i.test(product.name))
-        : state.products;
-      const ranked = new Map(eligibleProducts.map((product, index) => [product.id, {
-        product, score: 0, order: index, reasons: []
-      }]));
-      for (const question of steps) {
-        const answer = state.answers[question];
-        const additions = scoring[question]?.[answer] || [];
-        additions.forEach(([id, points, reason]) => {
-          const entry = ranked.get(id);
-          if (!entry) return;
-          entry.score += points;
-          if (!entry.reasons.includes(reason)) entry.reasons.push(reason);
-        });
-      }
-      return [...ranked.values()]
-        .sort((left, right) => right.score - left.score || left.order - right.order)
-        .slice(0, 2)
+      return recommendProducts(state.products, state.answers)
         .map(entry => ({ ...entry, product: escapeResultProduct(entry.product) }));
     }
 

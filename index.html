@@ -9,19 +9,21 @@
   <meta property="og:title" content="Сад №17 — вкус, который помнят">
   <meta property="og:description" content="Коллекция сладостей, персональный подбор вкуса и студия подарков. Демонстрационная концепция вымышленного бренда.">
   <meta property="og:url" content="https://dementer11.github.io/sad17-atelier/">
-  <meta property="og:image" content="https://dementer11.github.io/sad17-atelier/assets/demo/editorial-pastila-apples.webp">
+  <meta property="og:image" content="https://dementer11.github.io/sad17-atelier/assets/demo/editorial-hero-v3.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://dementer11.github.io/sad17-atelier/">
   <meta name="theme-color" content="#17211b">
   <link rel="icon" href="favicon.svg?v=sad17-1" type="image/svg+xml">
   <script src="theme.js"></script>
-  <link rel="stylesheet" href="styles.css?v=apple-4">
+  <link rel="stylesheet" href="styles.css?v=rich-5">
   <link rel="stylesheet" href="quiz.css">
   <link rel="stylesheet" href="gift.css">
-  <link rel="stylesheet" href="enhancements.css">
-  <script src="site.js" defer></script>
-  <script src="quiz.js" defer></script>
-  <script src="gift.js" defer></script>
+  <link rel="stylesheet" href="enhancements.css?v=rich-5">
+  <link rel="stylesheet" href="content-rich.css">
+  <link rel="stylesheet" href="rich.css">
+  <script src="site.js?v=rich-5" defer></script>
+  <script src="quiz.js?v=rich-5" defer></script>
+  <script src="gift.js?v=rich-5" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#catalog">Перейти к каталогу</a>
@@ -34,7 +36,8 @@
       <a href="#catalog">Коллекция</a>
       <a href="#taste-finder">Ваш вкус</a>
       <a href="#gift-studio">Подарки</a>
-      <a href="#story">Ателье</a>
+      <a href="#craft">О пастиле</a>
+      <a href="#journal">Журнал</a>
       <a href="#business">Для команды</a>
     </nav>
     <div class="header-actions">
@@ -48,16 +51,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">САД №17 · ЯБЛОЧНОЕ АТЕЛЬЕ</p>
-        <h1 id="hero-title">Вкус,<br>который<br><em>помнят.</em></h1>
-        <p class="hero-description">Яблочная пастила. Ягодные сочетания.<br>Маленькая пауза, которой хочется насладиться.</p>
+        <h1 id="hero-title">Яблоко.<br>Характер.<br><em>Удовольствие.</em></h1>
+        <p class="hero-description">Воздушная пастила, ягодная смоква и нежный зефир. Найдите любимый вкус, соберите подарок или откройте новый ритуал к чаю.</p>
         <div class="hero-cta">
           <a class="button primary" href="#catalog">Открыть коллекцию <span>↘</span></a>
           <a class="text-link" href="#taste-finder">Найти свой вкус <span>›</span></a>
         </div>
-        <p class="hero-footnote">Вымышленный бренд · презентационная концепция</p>
+        <div class="hero-facts"><span><strong>32</strong> вкуса и формата</span><span><strong>6</strong> коллекций</span><a href="#journal">Журнал о вкусе ↗</a></div>
+        <p class="hero-footnote">САД №17 · концепция вымышленного бренда</p>
       </div>
       <div class="hero-photo">
-        <img id="hero-image" src="assets/demo/editorial-pastila-apples.webp?v=studio-2" alt="AI-художественная фотография яблочной пастилы для вымышленного бренда САД №17" fetchpriority="high">
+        <img id="hero-image" src="assets/demo/editorial-hero-v3.png" alt="AI-художественная фотография яблочной пастилы для вымышленного бренда САД №17" fetchpriority="high">
         <div class="heritage-seal" aria-hidden="true"></div>
         <span class="photo-caption" aria-hidden="true"></span>
       </div>
@@ -70,13 +74,27 @@
       <span>Пауза для себя</span>
     </div>
 
+    <section class="rich-section rich-collections" id="collections" aria-labelledby="collections-title">
+  <div class="rich-heading">
+    <div><p class="eyebrow">КАРТА ВКУСОВ</p><h2 id="collections-title">Шесть семейств.<br>Найдите своё.</h2></div>
+    <p>Начните с того, что вам ближе: чистый яблочный вкус, ягодный контраст или новая текстура.</p>
+  </div>
+  <div class="rich-family-grid">
+    <article class="rich-family-card"><img src="assets/demo/pastila-classic.webp" alt="Концептуальная упаковка яблочной классической пастилы" loading="lazy"><div><span class="rich-index">01 · ОСНОВА</span><h3>Яблочная классика</h3><p>Спокойный старт для тех, кто хочет сначала услышать яблоко. Сравните классическую версию с более воздушной текстурой зефира.</p><a href="#catalog" data-family="classic">Выбрать это семейство <span aria-hidden="true">↗</span></a></div></article>
+    <article class="rich-family-card"><img src="assets/demo/pastila-cranberry.webp" alt="Концептуальная упаковка пастилы с клюквой" loading="lazy"><div><span class="rich-index">02 · КОНТРАСТ</span><h3>Ягоды и кислинка</h3><p>Клюква, вишня, смородина и ягодный микс задают разные оттенки. Выбирайте по настроению: от звонкой кислинки до насыщенного ягодного профиля.</p><a href="#catalog" data-family="berries">Выбрать это семейство <span aria-hidden="true">↗</span></a></div></article>
+    <article class="rich-family-card"><img src="assets/demo/pastila-no-sugar.webp" alt="Концептуальная упаковка классической пастилы без добавления сахара" loading="lazy"><div><span class="rich-index">03 · ЯБЛОЧНАЯ ЧИСТОТА</span><h3>Без добавления сахара</h3><p>Варианты с такой пометкой помогают исследовать яблочный и ягодный вкус без добавленного сахара в концепции состава. Смотрите описание каждой идеи отдельно.</p><a href="#catalog" data-family="no-sugar">Выбрать это семейство <span aria-hidden="true">↗</span></a></div></article>
+    <article class="rich-family-card"><img src="assets/demo/pastila-cedar.webp" alt="Концептуальная упаковка пастилы с кедровым орехом" loading="lazy"><div><span class="rich-index">04 · НОВАЯ ФАКТУРА</span><h3>Необычные текстуры</h3><p>Ореховая пастила, воздушный зефир и плотная смоква показывают, как одна яблочная идея меняется вместе с формой и ощущением при укусе.</p><a href="#catalog" data-family="other">Выбрать это семейство <span aria-hidden="true">↗</span></a></div></article>
+    <article class="rich-family-card"><img src="assets/collection/gift-tea-table.svg" alt="Подарочный набор К чаю" loading="lazy"><div><span class="rich-index">05 · ДЛЯ ВНИМАНИЯ</span><h3>Подарочный выбор</h3><p>Соберите знакомый яблочный вкус, одну яркую ягодную ноту и небольшую открытку. В этой семье важны сочетание и способ подачи.</p><a href="#catalog" data-family="gifts">Выбрать это семейство <span aria-hidden="true">↗</span></a></div></article>
+    <article class="rich-family-card"><img src="assets/collection/seasonal-winter.svg" alt="Сезонная коллекция Зимняя клюква" loading="lazy"><div><span class="rich-index">06 · НАСТРОЕНИЕ СЕЗОНА</span><h3>Сезонный акцент</h3><p>Яблоко с грушей и корицей для осеннего настроения, клюква с цитрусовой нотой для зимнего. Узнайте, как сезон меняет сочетания в коллекции.</p><a href="#catalog" data-family="seasonal">Выбрать это семейство <span aria-hidden="true">↗</span></a></div></article>
+  </div>
+</section>
     <section id="catalog" class="section catalog" aria-labelledby="catalog-title">
       <div class="section-heading">
         <div>
           <p class="eyebrow">КОЛЛЕКЦИЯ САДА</p>
-          <h2 id="catalog-title">Восемь вкусов.<br>Одна философия.</h2>
+          <h2 id="catalog-title">Коллекция, в которой<br>есть ваш вкус.</h2>
         </div>
-        <p>Чистые линии, глубокие оттенки и спокойные сочетания — знакомые вкусы в образе презентационной коллекции.</p>
+        <p>32 идеи: от нежной яблочной классики до терпких ягод, сезонных сочетаний и готовых подарков. Откройте карточку, чтобы узнать вкус, состав и лучшие сочетания.</p>
       </div>
       <div class="catalog-controls">
         <div class="filters" role="group" aria-label="Категории коллекции">
@@ -84,7 +102,7 @@
           <button class="filter" data-filter="classic" aria-pressed="false" type="button">Классика</button>
           <button class="filter" data-filter="berries" aria-pressed="false" type="button">С ягодами</button>
           <button class="filter" data-filter="no-sugar" aria-pressed="false" type="button">Без добавления сахара</button>
-          <button class="filter" data-filter="other" aria-pressed="false" type="button">Другие идеи</button>
+          <button class="filter" data-filter="other" aria-pressed="false" type="button">Смоква и зефир</button><button class="filter" data-filter="gifts" aria-pressed="false" type="button">Подарочные наборы</button><button class="filter" data-filter="seasonal" aria-pressed="false" type="button">Сезонные вкусы</button>
         </div>
         <label class="search"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Найти вкус" aria-label="Поиск по названию и составу"></label>
         <label class="sort-label">Порядок<select id="catalog-sort" aria-label="Сортировать коллекцию"><option value="collection">Выбор ателье</option><option value="name">По названию</option><option value="weight-asc">Масса: по возрастанию</option><option value="weight-desc">Масса: по убыванию</option></select></label>
@@ -92,9 +110,17 @@
       <p class="result-count" id="result-count" aria-live="polite"></p>
       <div id="products" class="products"></div>
       <div id="empty" hidden class="empty">В этой подборке такого названия нет. <button id="reset-search" type="button">Показать все вкусы</button></div>
-      <p class="catalog-note">Демонстрационный ассортимент и AI-концепты упаковок. Это не реальные товары и не предложение к продаже.</p>
+      <div class="catalog-pagination"><p id="catalog-progress" aria-live="polite"></p><button id="load-more" class="button outline" type="button">Показать ещё</button><a href="#collections">Помочь с выбором ↑</a></div><p class="catalog-note">Презентационный ассортимент САД №17. Изображения и составы показывают идею коллекции.</p>
     </section>
 
+    <section class="rich-section rich-formats" id="formats" aria-labelledby="formats-title">
+  <div class="rich-heading"><div><p class="eyebrow">ФОРМАТЫ ДЛЯ МОМЕНТА</p><h2 id="formats-title">Лента, порция<br>или набор?</h2></div><p>Подумайте не только о вкусе, но и о том, как вы хотите его разделить и подать.</p></div>
+  <div class="rich-format-grid">
+    <article><span class="rich-format-number">01</span><h3>Ленты</h3><p>Нарежьте пласт пастилы узкими лентами и сверните свободными спиралями. Такой способ удобен для дегустации нескольких вкусов на одной тарелке.</p></article>
+    <article><span class="rich-format-number">02</span><h3>Порции</h3><p>Разделите десерт на одинаковые небольшие кусочки: так проще подать его к чашкам и дать каждому попробовать по нескольку сочетаний.</p></article>
+    <article><span class="rich-format-number">03</span><h3>Наборы</h3><p>Соберите композицию из знакомого, ягодного и неожиданного вкуса. Оставьте место для открытки и короткой личной фразы.</p></article>
+  </div>
+</section>
     <section class="section quiz-section" id="taste-finder" aria-labelledby="quiz-title">
   <div class="quiz-shell">
     <div class="quiz-intro">
@@ -132,20 +158,41 @@
   </div>
 </section>
 
+    <section class="rich-section rich-craft" id="craft" aria-labelledby="craft-title">
+  <div class="rich-heading">
+    <div><p class="eyebrow">ОТ ЯБЛОКА К ТЕКСТУРЕ</p><h2 id="craft-title">Четыре шага<br>вкусовой истории.</h2></div>
+    <p>Редакционная схема для этой концепции: она помогает представить путь яблочного десерта, не описывая производство конкретного предприятия.</p>
+  </div>
+  <ol class="rich-step-list">
+    <li><span>01</span><div><h3>Яблоко</h3><p>Всё начинается с характера фрукта: аромат, свежесть и собственная фруктовая сладость задают направление будущему вкусу.</p></div></li>
+    <li><span>02</span><div><h3>Пюре</h3><p>Яблочная мякоть становится цельной основой. В этой точке к ней можно мысленно добавить ягоду, орех или оставить вкус чистым.</p></div></li>
+    <li><span>03</span><div><h3>Аэрация</h3><p>Образ лёгкости появляется благодаря воздуху и объёму. Так в нашей вкусовой карте различаются плотная фруктовая пластина и более воздушная сладость.</p></div></li>
+    <li><span>04</span><div><h3>Бережная сушка</h3><p>Финальный образ — собранная текстура, которую удобно разделить на ломтики и подать маленькими порциями.</p></div></li>
+  </ol>
+  <p class="rich-note">Это схема для рассказа о вымышленной коллекции, а не технологическое описание или обещание свойств реального продукта.</p>
+</section>
     <section id="story" class="story section" aria-labelledby="story-title">
       <div class="story-image">
         <img src="assets/demo/editorial-sweets.webp" alt="AI-художественная фотография десерта для вымышленного яблочного ателье" loading="lazy">
         <span class="image-note">Образ коллекции · САД №17</span>
       </div>
       <div class="story-copy">
-        <p class="eyebrow">ВЫМЫШЛЕННОЕ ЯБЛОЧНОЕ АТЕЛЬЕ</p>
+        <p class="eyebrow">ФИЛОСОФИЯ АТЕЛЬЕ</p>
         <h2 id="story-title">Ничего лишнего.<br>Кроме удовольствия.</h2>
-        <p>САД №17 — вымышленный бренд и презентационная идея вокруг яблочной пастилы. Мы придумали образ с вниманием к цвету, форме и тихим деталям.</p>
-        <p>В этой концепции вкус встречается с лаконичной упаковкой, а привычная пауза получает свой маленький ритуал.</p>
+        <p>САД №17 начинается с простой идеи: знакомая сладость может быть интересной. В нашей коллекции яблочная основа встречается с ягодами, орехами и пряностями — у каждого сочетания свой характер.</p>
+        <p>Выбирайте не только по названию. Сравните текстуры, найдите пару к любимому напитку или соберите набор из разных настроений. Подробности каждого вкуса собраны в карточке.</p>
         <a class="text-link" href="#catalog">Посмотреть коллекцию <span>›</span></a>
       </div>
     </section>
 
+    <section class="rich-section rich-pairings" id="pairings" aria-labelledby="pairings-title">
+  <div class="rich-heading"><div><p class="eyebrow">ПОДАТЬ И ПОПРОБОВАТЬ</p><h2 id="pairings-title">Три повода<br>для паузы.</h2></div><p>Подача меняет впечатление: начните с небольшого кусочка и подберите напиток по контрасту.</p></div>
+  <div class="rich-pairing-grid">
+    <article><span class="rich-pairing-mark" aria-hidden="true">01</span><p class="rich-index">ДЛЯ ЧАЙНОЙ ПАУЗЫ</p><h3>К чаю</h3><p>Классическую пастилу подайте с чёрным чаем без добавок, а ягодный вариант — с мягким зелёным. Нарежьте небольшими полосками, чтобы можно было сравнить яблочную основу и ягодную ноту.</p><a href="journal.html#article-tea">Читать о чайной паре <span aria-hidden="true">↗</span></a></article>
+    <article><span class="rich-pairing-mark" aria-hidden="true">02</span><p class="rich-index">СОБРАННЫЙ</p><h3>К кофе</h3><p>К кофе попробуйте контраст: кусочек вишнёвой пастилы рядом с небольшим чёрным кофе или ореховую ноту рядом с мягким латте. Сначала сделайте глоток, затем попробуйте десерт — так легче уловить разницу.</p><a href="journal.html#article-coffee">Читать о кофейной паре <span aria-hidden="true">↗</span></a></article>
+    <article><span class="rich-pairing-mark" aria-hidden="true">03</span><p class="rich-index">С ВНИМАНИЕМ</p><h3>В подарок</h3><p>Для маленького набора соедините знакомый яблочный вкус, одну ягодную ноту и открытку. Чередуйте упаковки по цвету и формату, оставляя каждому вкусу немного воздуха.</p><a href="journal.html#article-gift">Читать о композиции набора <span aria-hidden="true">↗</span></a></article>
+  </div>
+</section>
     <section id="gift-studio" class="gift-studio" aria-labelledby="gift-title">
   <div class="gift-studio__intro">
     <p class="gift-studio__eyebrow">ТИХИЙ ЖЕСТ · САД №17</p>
@@ -244,11 +291,20 @@
       </div>
     </section>
 
+    <section class="rich-section rich-team" id="team-ideas" aria-labelledby="team-title">
+  <div class="rich-heading"><div><p class="eyebrow">ИДЕИ ДЛЯ КОМАНДЫ</p><h2 id="team-title">Подарок как<br>маленький жест.</h2></div><p>Три сценария, которые можно использовать как отправную точку для собственного события.</p></div>
+  <div class="rich-team-grid">
+    <article><span>01 · ПЕРВОЕ ЗНАКОМСТВО</span><h3>Welcome-набор</h3><p>Две яблочные идеи, ягодный вкус и короткая карточка «рады знакомству» для нового коллеги.</p></article>
+    <article><span>02 · СПАСИБО</span><h3>Знак признательности</h3><p>Небольшое сочетание классики и яркого вкуса с открыткой, где команда пишет одно общее спасибо.</p></article>
+    <article><span>03 · СОБЫТИЕ</span><h3>Деталь встречи</h3><p>Порционные кусочки на столе регистрации и мини-карточка с выбором вкусов для неформального знакомства.</p></article>
+  </div>
+  <p class="rich-note">Это идеи оформления для вымышленного бренда; здесь нет заказа, продажи, цены или доставки.</p>
+</section>
     <section id="business" class="business section" aria-labelledby="business-title">
       <div class="business-copy">
         <p class="eyebrow">ИДЕЯ ДЛЯ СОБЫТИЙ И КОМАНД</p>
         <h2 id="business-title">Вкусная идея.<br>Красивый жест.</h2>
-        <p>Представьте яблочную коллекцию как камерный подарок, welcome-набор или деталь события. Всё на этой странице — вымышленная концепция для обсуждения идеи.</p>
+        <p>Для нового сотрудника, гостя события или партнёра: небольшой набор может передать больше, чем стандартный сувенир. Сочетайте несколько вкусов, выберите формат и добавьте личное пожелание.</p>
         <div class="business-tags"><span>Подарочный набор</span><span>Для команды</span><span>Концепт СТМ</span></div>
       </div>
       <form id="business-form">
@@ -264,13 +320,29 @@
       </form>
     </section>
 
+    <section class="rich-section rich-journal-preview" id="journal" aria-labelledby="journal-preview-title">
+  <div class="rich-heading"><div><p class="eyebrow">ЗАПИСКИ АТЕЛЬЕ</p><h2 id="journal-preview-title">Вкус начинается<br>с внимания.</h2></div><p>Короткие заметки о сочетаниях, подаче, текстуре и маленьких деталях подарка.</p></div>
+  <div class="rich-journal-grid">
+    <a href="journal.html#article-map"><span>01 · ВКУС</span><h3>Как читать вкусовую карту</h3><p>Яблочная основа, ягоды и текстура: с чего начать сравнение.</p><b>Открыть заметку ↗</b></a>
+    <a href="journal.html#article-contrast"><span>02 · БАЛАНС</span><h3>Ягоды без спешки</h3><p>Как замечать кислинку, сладость и долгий ягодный оттенок.</p><b>Открыть заметку ↗</b></a>
+    <a href="journal.html#article-tea"><span>03 · ЧАЙ</span><h3>Небольшая чайная подача</h3><p>Температура напитка, размер кусочка и порядок дегустации.</p><b>Открыть заметку ↗</b></a>
+    <a href="journal.html#article-coffee"><span>04 · КОФЕ</span><h3>Пара к чашке кофе</h3><p>Контрастный и мягкий сценарии без сложных правил.</p><b>Открыть заметку ↗</b></a>
+    <a href="journal.html#article-gift"><span>05 · ПОДАРОК</span><h3>Собрать вкусовую композицию</h3><p>Принцип знакомого вкуса, яркой ноты и личного сообщения.</p><b>Открыть заметку ↗</b></a>
+    <a href="journal.html#article-formats"><span>06 · ТЕКСТУРА</span><h3>Три способа подать</h3><p>Ленты, порции и наборы для разных моментов.</p><b>Открыть заметку ↗</b></a>
+  </div>
+  <a class="rich-more-link" href="journal.html">Все заметки ателье <span aria-hidden="true">↗</span></a>
+</section>
     <section class="section questions" aria-labelledby="questions-title">
-      <div><p class="eyebrow">О ДЕМО-КОЛЛЕКЦИИ</p><h2 id="questions-title">Частые вопросы.</h2></div>
+      <div><p class="eyebrow">ПОЛЕЗНО ЗНАТЬ</p><h2 id="questions-title">Частые вопросы.</h2></div>
       <div class="faq">
-        <details><summary>Это реальные товары?</summary><p>Нет. САД №17 — вымышленный бренд, а ассортимент и упаковки на странице созданы как презентационная концепция. Покупка и заказ не предлагаются.</p></details>
-        <details><summary>Что означают названия вкусов?</summary><p>Это названия вкусов для демонстрации идеи коллекции. Они не подтверждают состав реального продукта.</p></details>
-        <details><summary>Что означает надпись «без добавления сахара»?</summary><p>Это часть концептуальных названий в демонстрационном каталоге, а не характеристика продаваемого товара или рекомендация по питанию.</p></details>
-        <details><summary>Как отправить запрос?</summary><p>Заполните демо-форму: она покажет текст для ознакомления. Данные не сохраняются и не отправляются; на сайте нет оформления заказа.</p></details>
+        <details><summary>С какого вкуса начать знакомство?</summary><p>С классической яблочной пастилы: так проще почувствовать воздушную текстуру и яблочную основу. Если любите кислинку, попробуйте клюкву или вишню. Если хочется более плотного фруктового вкуса — смокву. Подборщик учитывает настроение, повод и предпочтение по добавлению сахара.</p></details>
+        <details><summary>Чем пастила отличается от смоквы и зефира?</summary><p>В этой коллекции пастила — мягкий слоистый формат, смоква — плотная фруктовая пластинка, зефир — нежная отдельная порция. Разные текстуры удобно сравнить в наборе «Три настроения». О форматах подробнее рассказано в журнале.</p></details>
+        <details><summary>Что значит «без добавления сахара»?</summary><p>В предложенном составе таких концепций нет добавленного сахара. Фрукты и ягоды при этом содержат природные сахара. Эта пометка не означает отсутствие сахаров и не является рекомендацией по питанию; составы здесь демонстрационные.</p></details>
+        <details><summary>Как выбрать набор для подарка?</summary><p>Для первого знакомства подойдёт набор с несколькими текстурами; любителю ярких вкусов — ягодная подборка. Для небольшой благодарности можно собрать три предмета в студии подарков, для более разнообразной композиции — пять. К набору можно добавить пожелание и скачать открытку.</p></details>
+        <details><summary>Где посмотреть состав и аллергены?</summary><p>Откройте любую карточку товара. В разделе «Подробности вкуса» указаны предлагаемый состав, аллергены, масса, текстура и сочетания. В коллекции есть варианты с яичным белком и орехами; демонстрационные описания не заменяют маркировку реального продукта.</p></details>
+        <details><summary>Как хранить и подавать пастилу?</summary><p>Идея подачи — небольшие ломтики на сухой тарелке рядом с напитком. Для концептуальных упаковок указано хранение в сухом месте, отдельно от сильных запахов и влажности. Для реального продукта всегда следуйте условиям на его упаковке.</p></details>
+        <details><summary>Можно сохранить подборку и подарочную открытку?</summary><p>Да. Кнопка «+» сохраняет вкусы в подборку в этом браузере. Подарочная студия отдельно сохраняет черновик и позволяет скачать PNG-открытку или скопировать состав. Общий сброс настроек находится внизу сайта.</p></details>
+        <details><summary>Можно купить эти товары?</summary><p>САД №17 — вымышленная презентационная концепция, поэтому сайт не принимает заказы или оплату. Все вкусы, упаковки и материалы созданы для демонстрации возможного бренда.</p></details>
       </div>
     </section>
   </main>
@@ -278,12 +350,12 @@
   <footer>
     <div class="footer-top">
       <a href="#top" class="brand" aria-label="САД №17 — яблочное ателье, наверх"><span class="brand-symbol" aria-hidden="true">17</span><span>САД №17<small>ЯБЛОЧНОЕ АТЕЛЬЕ</small></span></a>
-      <div><a href="#catalog">Коллекция</a><a href="#taste-finder">Подобрать вкус</a><a href="#gift-studio">Студия подарков</a><a href="#business">Для команды</a></div>
+      <div><a href="#catalog">Коллекция</a><a href="#taste-finder">Подобрать вкус</a><a href="#gift-studio">Студия подарков</a><a href="#business">Для команды</a><a href="journal.html">Журнал</a><a href="#craft">О пастиле</a><a href="#pairings">Сочетания</a></div>
       <p>Вымышленный бренд<br>Презентационная концепция</p>
     </div>
     <div class="footer-bottom">
       <span>САД №17 · Яблочное ателье</span>
-      <p>AI-изображения и упаковки созданы для демонстрации идеи. Это не реальные товары и не предложение к продаже.</p>
+      <p>Фотографии и иллюстрации упаковок созданы для демонстрации идеи. Это не реальные товары и не предложение к продаже.</p>
       <button id="open-sources" type="button">О концепции</button>
     </div>
     <div class="footer-legal"><a href="privacy.html">Как работают данные</a><a href="terms.html">О демонстрации</a><button id="clear-preferences" type="button">Сбросить настройки</button><a href="#top">Наверх ↑</a></div>
@@ -291,7 +363,7 @@
 
   <dialog id="product-dialog" class="product-dialog" aria-label="Концепция вкуса"><button class="close" data-close type="button" aria-label="Закрыть">×</button><div id="product-detail"></div></dialog>
   <dialog id="selection-dialog" class="selection-dialog" aria-label="Моя подборка"><button class="close" data-close type="button" aria-label="Закрыть">×</button><p class="eyebrow">ВАША ДЕМО-ПОДБОРКА</p><h2>Мой выбор</h2><div id="selection-list"></div><button id="selection-email" class="button primary" type="button">Скопировать подборку</button><p class="catalog-note">Подборка существует только в этой демонстрации. Ничего не заказывается и не отправляется.</p></dialog>
-  <dialog id="sources-dialog" class="sources-dialog" aria-label="О презентационной концепции"><button class="close" data-close type="button" aria-label="Закрыть">×</button><h2>О концепции</h2><p>САД №17 — вымышленный бренд «яблочного ателье», созданный для демонстрации визуальной идеи коллекции пастилы.</p><p>Названия, ассортимент, тексты и упаковки — концептуальные. Фотографии упаковки созданы с помощью ИИ; они не изображают реальные товары.</p><p>Страница не является магазином, офертой или предложением приобрести продукцию.</p></dialog>
+  <dialog id="sources-dialog" class="sources-dialog" aria-label="О презентационной концепции"><button class="close" data-close type="button" aria-label="Закрыть">×</button><h2>О концепции</h2><p>САД №17 — вымышленный бренд «яблочного ателье», созданный для демонстрации визуальной идеи коллекции пастилы.</p><p>Названия, ассортимент, тексты и упаковки — концептуальные. На странице используются AI-фотографии и векторные концепции упаковки; они не изображают реальные товары.</p><p>Страница не является магазином, офертой или предложением приобрести продукцию.</p></dialog>
   <div class="compare-bar" id="compare-bar" hidden><span id="compare-count" aria-live="polite"></span><button class="button primary" id="open-compare" type="button">Сравнить вкусы</button><button id="clear-compare" type="button" aria-label="Очистить сравнение">Сбросить</button></div>
   <dialog id="compare-dialog" aria-label="Сравнение вкусов"><button class="close" data-close type="button" aria-label="Закрыть">×</button><p class="eyebrow">ДЕТАЛИ КОЛЛЕКЦИИ</p><h2>Сравнить вкусы</h2><div id="compare-content"></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

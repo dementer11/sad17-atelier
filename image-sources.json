@@ -48,5 +48,130 @@
     "file": "assets/demo/zefir-antonovka.webp",
     "mode": "built-in ImageGen",
     "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/editorial-hero-v3.png",
+    "mode": "built-in ImageGen",
+    "purpose": "seamless editorial hero for fictional brand"
+  },
+  {
+    "file": "assets/collection/pastila-pear.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-blackcurrant.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-blueberry.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-raspberry.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-apple-pear-no-sugar.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-apple-plum-no-sugar.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-apple-raspberry-no-sugar.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-apple-blackcurrant-no-sugar.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/smokva-apple.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/smokva-cherry.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/zefir-berry.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/gift-tasting-trio.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/gift-berry-box.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/gift-no-added-sugar.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/gift-tea-table.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/gift-mini-assortment.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/seasonal-autumn.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/seasonal-winter.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/seasonal-spring.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/seasonal-summer.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/seasonal-new-year.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-rolls.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/pastila-crisps.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
+  },
+  {
+    "file": "assets/collection/fruit-cubes.svg",
+    "mode": "original vector packaging illustration",
+    "purpose": "fictional-brand concept"
   }
 ]

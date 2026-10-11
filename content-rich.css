@@ -1,0 +1,77 @@
+.rich-section {
+  width: 100%;
+  max-width: calc(var(--content, 1280px) + 48px);
+  margin: 0 auto;
+  padding: clamp(64px, 9vw, 112px) 24px;
+  scroll-margin-top: 82px;
+}
+.rich-section:nth-of-type(even) { background: var(--page); }
+.rich-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 34px; }
+.rich-heading h2 { margin: 0; font-size: clamp(38px, 5.8vw, 64px); }
+.rich-heading > p { max-width: 390px; margin: 0 0 5px; color: var(--muted); font-size: 15px; }
+.rich-family-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.rich-family-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-card, 24px); background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+.rich-family-card > img { width: 100%; height: 230px; padding: 10px; background: var(--surface-alt, var(--page)); object-fit: contain; }
+.rich-family-card > div { padding: 20px 21px 22px; }
+.rich-index, .rich-family-card .rich-index { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.rich-family-card h3, .rich-pairing-grid h3, .rich-format-grid h3, .rich-team-grid h3 { margin: 8px 0 9px; font-size: 23px; line-height: 1.13; }
+.rich-family-card p, .rich-pairing-grid p:not(.rich-index), .rich-format-grid p, .rich-team-grid p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+.rich-family-card a, .rich-pairing-grid a, .rich-more-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; font-size: 12px; font-weight: 650; }
+.rich-step-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.rich-step-list li { min-height: 214px; border: 1px solid var(--line); border-radius: var(--radius-card, 24px); padding: 22px; background: var(--surface); box-shadow: var(--shadow); }
+.rich-step-list li > span, .rich-format-number { display: block; margin-bottom: 36px; color: var(--blue); font-size: 11px; font-weight: 750; letter-spacing: .1em; }
+.rich-step-list h3 { margin: 0 0 9px; font-size: 22px; }
+.rich-step-list p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.62; }
+.rich-note { max-width: 760px; margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.rich-pairing-grid, .rich-format-grid, .rich-team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.rich-pairing-grid > article, .rich-format-grid > article, .rich-team-grid > article { position: relative; min-height: 250px; border: 1px solid var(--line); border-radius: var(--radius-card, 24px); padding: 25px; background: var(--surface); box-shadow: var(--shadow); }
+.rich-pairing-mark { position: absolute; top: 21px; right: 23px; color: var(--line); font-size: 32px; font-weight: 700; letter-spacing: -.06em; }
+.rich-pairing-grid .rich-index { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.rich-pairing-grid h3 { margin-top: 18px; }
+.rich-pairing-grid a { margin-top: 16px; }
+.rich-format-number { margin-bottom: 48px; }
+.rich-format-grid > article { min-height: 215px; }
+.rich-format-grid h3 { font-size: 26px; }
+.rich-team-grid > article { min-height: 205px; }
+.rich-team-grid > article > span { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .09em; }
+.rich-team-grid h3 { margin-top: 23px; }
+.rich-journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.rich-journal-grid > a { display: flex; min-height: 218px; flex-direction: column; align-items: flex-start; border: 1px solid var(--line); border-radius: var(--radius-card, 24px); padding: 21px; background: var(--surface); color: var(--ink); text-decoration: none; box-shadow: var(--shadow); transition: transform .18s ease, border-color .18s ease; }
+.rich-journal-grid > a:hover { transform: translateY(-3px); border-color: var(--blue); }
+.rich-journal-grid > a > span { color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.rich-journal-grid h3 { margin: 21px 0 9px; font-size: 21px; line-height: 1.15; }
+.rich-journal-grid p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.rich-journal-grid b { margin-top: auto; padding-top: 17px; color: var(--blue); font-size: 11px; }
+.rich-more-link { margin-top: 25px; }
+@media (max-width: 980px) {
+  .rich-family-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rich-step-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rich-journal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 680px) {
+  .rich-section { padding: 65px 20px; }
+  .rich-heading { display: block; margin-bottom: 25px; }
+  .rich-heading > p { margin-top: 13px; font-size: 14px; }
+  .rich-family-grid, .rich-pairing-grid, .rich-format-grid, .rich-team-grid, .rich-journal-grid { grid-template-columns: minmax(0, 1fr); }
+  .rich-family-card { display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr); }
+  .rich-family-card > img { height: 100%; min-height: 210px; padding: 7px; }
+  .rich-family-card > div { padding: 17px 14px; }
+  .rich-family-card h3 { font-size: 20px; }
+  .rich-family-card p { font-size: 13px; }
+  .rich-step-list { gap: 9px; }
+  .rich-step-list li { min-height: 206px; padding: 17px; }
+  .rich-step-list li > span { margin-bottom: 26px; }
+  .rich-pairing-grid > article, .rich-format-grid > article, .rich-team-grid > article { min-height: 0; padding: 21px; }
+  .rich-format-number { margin-bottom: 24px; }
+  .rich-journal-grid > a { min-height: 190px; }
+}
+@media (max-width: 360px) {
+  .rich-section { padding-inline: 16px; }
+  .rich-family-card { grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); }
+  .rich-family-card > img { min-height: 235px; }
+  .rich-family-card > div { padding: 14px 11px; }
+  .rich-family-card .rich-index { font-size: 9px; }
+  .rich-family-card h3 { font-size: 18px; }
+  .rich-family-card p { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .rich-journal-grid > a { transition: none; } }
