@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dementer11.github.io/sad17-atelier/sitemap.xml

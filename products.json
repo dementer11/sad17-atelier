@@ -1,0 +1,82 @@
+[
+  {
+    "id": "pastila-classic",
+    "name": "Пастила классическая",
+    "category": "classic",
+    "weight": "200 г",
+    "ingredients": "яблоки, сахар, яичный белок",
+    "image": "assets/demo/pastila-classic.webp",
+    "description": "Классическая воздушная пастила из печёных антоновских яблок.",
+    "demo": true
+  },
+  {
+    "id": "pastila-cranberry",
+    "name": "Пастила с клюквой",
+    "category": "berries",
+    "weight": "200 г",
+    "ingredients": "яблоки, клюква, сахар, яичный белок",
+    "image": "assets/demo/pastila-cranberry.webp",
+    "description": "Яблочная пастила с яркой кислинкой клюквы.",
+    "demo": true
+  },
+  {
+    "id": "pastila-no-sugar",
+    "name": "Пастила классическая без добавления сахара",
+    "category": "no-sugar",
+    "weight": "100 г",
+    "ingredients": "яблоки, яичный белок",
+    "image": "assets/demo/pastila-no-sugar.webp",
+    "description": "Классическая яблочная пастила без добавления сахара.",
+    "demo": true
+  },
+  {
+    "id": "pastila-cherry-no-sugar",
+    "name": "Пастила с вишней без добавления сахара",
+    "category": "no-sugar",
+    "weight": "100 г",
+    "ingredients": "яблоки, вишня, яичный белок",
+    "image": "assets/demo/pastila-cherry-no-sugar.webp",
+    "description": "Яблочная пастила с вишней; сладость — из природных сахаров фруктов.",
+    "demo": true
+  },
+  {
+    "id": "pastila-cedar",
+    "name": "Пастила с кедровым орехом",
+    "category": "other",
+    "weight": "200 г",
+    "ingredients": "яблоки, кедровые орехи, сахар, яичный белок",
+    "image": "assets/demo/pastila-cedar.webp",
+    "description": "Пастила из печёных яблок с кедровыми орехами.",
+    "demo": true
+  },
+  {
+    "id": "smokva-cranberry",
+    "name": "Смоква клюквенная без добавления сахара",
+    "category": "other",
+    "weight": "50 г",
+    "ingredients": "клюква",
+    "image": "assets/demo/smokva-cranberry.webp",
+    "description": "Плотная фруктовая смоква с клюквой без добавления сахара.",
+    "demo": true
+  },
+  {
+    "id": "zefir-antonovka",
+    "name": "Зефир «Антоновка»",
+    "category": "other",
+    "weight": "80 г",
+    "ingredients": "сахар, пюре яблочное, сироп глюкозный, желирующий агент-пектин, белок яичный сухой, регулятор кислотности — кислота молочная, агент влагоудерживающий — лактат натрия, эссенция яблочная",
+    "image": "assets/demo/zefir-antonovka.webp",
+    "description": "Яблочный зефир со вкусом антоновки.",
+    "demo": true
+  },
+  {
+    "id": "pastila-berries-no-sugar",
+    "name": "Пастила «Ягодное ассорти» без добавления сахара",
+    "category": "no-sugar",
+    "weight": "100 г",
+    "ingredients": "яблоки, чёрная смородина, брусника, клюква, черника, яичный белок",
+    "image": "assets/demo/pastila-berries-no-sugar.webp",
+    "description": "Яблочная пастила с ассорти ягод без добавления сахара.",
+    "demo": true
+  }
+]

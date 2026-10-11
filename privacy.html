@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17211b">
+  <title>Как работают данные — САД №17</title>
+  <meta name="description" content="Какие данные остаются в браузере в демонстрации САД №17 и как ими управлять.">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body class="prose-page" id="top">
+  <a class="prose-skip" href="#page-content">К содержанию</a>
+  <header class="prose-header">
+    <a class="prose-brand" href="./index.html" aria-label="САД №17 — на главную">САД №17 <span>ЯБЛОЧНОЕ АТЕЛЬЕ</span></a>
+    <div class="prose-header-actions">
+      <a class="prose-back" href="./index.html">← На главную</a>
+      <button class="prose-theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему">Тема: <span id="theme-label">авто</span></button>
+    </div>
+  </header>
+  <main class="prose-main" id="page-content">
+    <p class="prose-eyebrow">ДЕМОНСТРАЦИОННЫЙ САЙТ · САД №17</p>
+    <h1>Как работают данные</h1>
+    <p class="prose-lead">САД №17 — вымышленная презентационная концепция. Сайт не принимает заказы и не отправляет введённые в демонстрационные формы сведения.</p>
+
+    <section aria-labelledby="local-title">
+      <h2 id="local-title">Настройки в браузере</h2>
+      <p>Для работы демонстрационных функций браузер может хранить локальные настройки сайта:</p>
+      <ul>
+        <li><code>sad17-theme</code> — выбранный вид страницы: светлый, тёмный или автоматический;</li>
+        <li><code>sad17-choice</code> — идентификаторы вкусов, добавленных в демонстрационную подборку;</li>
+        <li><code>sad17-gift</code> — настройки концептуального подарка: количество, текст поздравления и заметка.</li>
+      </ul>
+      <p>Эти настройки сохраняются в локальном хранилище браузера для этого сайта. Поздравление и заметка могут содержать введённый вами текст; если вы добавите туда личные сведения, они останутся в этом браузере до сброса настроек или удаления данных сайта. Настройки не отправляются на сервер и не используются для заказа или профиля пользователя. Текст из демо-формы показывается только в предварительном просмотре и не сохраняется.</p>
+      <p>Настройки можно сбросить кнопкой «Очистить настройки» на главной странице, если она доступна, или удалить данные сайта в настройках браузера. После очистки сохранённый вид страницы и подборка будут сброшены.</p>
+    </section>
+
+    <section aria-labelledby="network-title">
+      <h2 id="network-title">Запросы к сайту и сторонние сервисы</h2>
+      <p>Страница загружает свои статические файлы и локальный каталог. В демонстрации не подключены аналитика, рекламные пиксели, сторонние cookies или API. Кнопка копирования использует буфер обмена только после нажатия пользователем.</p>
+      <p>Сайт публикуется через GitHub Pages. Это инфраструктура хостинга, отдельная от функций самой демонстрации: GitHub сообщает, что при посещении сайта GitHub Pages IP-адрес посетителя регистрируется и хранится в целях безопасности. Подробности — в <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">описании GitHub Pages</a> и <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">общем уведомлении GitHub о конфиденциальности</a>.</p>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Вопросы</h2>
+      <p>Это информационная страница вымышленной концепции, а не политика реального продавца или юридического лица. Формы и контакты для передачи персональных данных здесь отсутствуют.</p>
+    </section>
+  </main>
+  <footer class="prose-footer">
+    <span>САД №17 · Вымышленная презентационная концепция</span>
+    <nav aria-label="Информация о сайте"><a href="./terms.html">О демонстрации</a><a href="./404.html">Страница не найдена</a></nav>
+  </footer>
+</body>
+</html>

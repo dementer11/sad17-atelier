@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>САД №17 — яблочное ателье</title>
+  <meta name="description" content="Сад №17 — концепция яблочного ателье. Откройте коллекцию, найдите свой вкус и соберите подарочный набор. Светлая и ночная темы.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Сад №17 — вкус, который помнят">
+  <meta property="og:description" content="Коллекция сладостей, персональный подбор вкуса и студия подарков. Демонстрационная концепция вымышленного бренда.">
+  <meta property="og:url" content="https://dementer11.github.io/sad17-atelier/">
+  <meta property="og:image" content="https://dementer11.github.io/sad17-atelier/assets/demo/editorial-pastila-apples.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://dementer11.github.io/sad17-atelier/">
+  <meta name="theme-color" content="#17211b">
+  <link rel="icon" href="favicon.svg?v=sad17-1" type="image/svg+xml">
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css?v=apple-4">
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="stylesheet" href="gift.css">
+  <link rel="stylesheet" href="enhancements.css">
+  <script src="site.js" defer></script>
+  <script src="quiz.js" defer></script>
+  <script src="gift.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#catalog">Перейти к каталогу</a>
+  <header class="header">
+    <a href="#top" class="brand" aria-label="САД №17 — яблочное ателье, наверх">
+      <span class="brand-symbol" aria-hidden="true">17</span>
+      <span>САД №17<small>ЯБЛОЧНОЕ АТЕЛЬЕ</small></span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#catalog">Коллекция</a>
+      <a href="#taste-finder">Ваш вкус</a>
+      <a href="#gift-studio">Подарки</a>
+      <a href="#story">Ателье</a>
+      <a href="#business">Для команды</a>
+    </nav>
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Изменить тему"><span class="theme-toggle-icon" aria-hidden="true">◐</span><span class="theme-label" id="theme-label">Авто</span></button>
+      <button class="selection-button" id="open-selection" type="button" aria-label="Открыть подборку">Подборка <span id="selection-count">0</span></button>
+      <button id="menu-button" class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">САД №17 · ЯБЛОЧНОЕ АТЕЛЬЕ</p>
+        <h1 id="hero-title">Вкус,<br>который<br><em>помнят.</em></h1>
+        <p class="hero-description">Яблочная пастила. Ягодные сочетания.<br>Маленькая пауза, которой хочется насладиться.</p>
+        <div class="hero-cta">
+          <a class="button primary" href="#catalog">Открыть коллекцию <span>↘</span></a>
+          <a class="text-link" href="#taste-finder">Найти свой вкус <span>›</span></a>
+        </div>
+        <p class="hero-footnote">Вымышленный бренд · презентационная концепция</p>
+      </div>
+      <div class="hero-photo">
+        <img id="hero-image" src="assets/demo/editorial-pastila-apples.webp?v=studio-2" alt="AI-художественная фотография яблочной пастилы для вымышленного бренда САД №17" fetchpriority="high">
+        <div class="heritage-seal" aria-hidden="true"></div>
+        <span class="photo-caption" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <div class="ribbon" aria-label="Идеи коллекции">
+      <span>Яблочная основа</span><i aria-hidden="true">·</i>
+      <span>Ягодные сочетания</span><i aria-hidden="true">·</i>
+      <span>Чистые линии</span><i aria-hidden="true">·</i>
+      <span>Пауза для себя</span>
+    </div>
+
+    <section id="catalog" class="section catalog" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">КОЛЛЕКЦИЯ САДА</p>
+          <h2 id="catalog-title">Восемь вкусов.<br>Одна философия.</h2>
+        </div>
+        <p>Чистые линии, глубокие оттенки и спокойные сочетания — знакомые вкусы в образе презентационной коллекции.</p>
+      </div>
+      <div class="catalog-controls">
+        <div class="filters" role="group" aria-label="Категории коллекции">
+          <button class="filter active" data-filter="all" aria-pressed="true" type="button">Все вкусы</button>
+          <button class="filter" data-filter="classic" aria-pressed="false" type="button">Классика</button>
+          <button class="filter" data-filter="berries" aria-pressed="false" type="button">С ягодами</button>
+          <button class="filter" data-filter="no-sugar" aria-pressed="false" type="button">Без добавления сахара</button>
+          <button class="filter" data-filter="other" aria-pressed="false" type="button">Другие идеи</button>
+        </div>
+        <label class="search"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Найти вкус" aria-label="Поиск по названию и составу"></label>
+        <label class="sort-label">Порядок<select id="catalog-sort" aria-label="Сортировать коллекцию"><option value="collection">Выбор ателье</option><option value="name">По названию</option><option value="weight-asc">Масса: по возрастанию</option><option value="weight-desc">Масса: по убыванию</option></select></label>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div id="products" class="products"></div>
+      <div id="empty" hidden class="empty">В этой подборке такого названия нет. <button id="reset-search" type="button">Показать все вкусы</button></div>
+      <p class="catalog-note">Демонстрационный ассортимент и AI-концепты упаковок. Это не реальные товары и не предложение к продаже.</p>
+    </section>
+
+    <section class="section quiz-section" id="taste-finder" aria-labelledby="quiz-title">
+  <div class="quiz-shell">
+    <div class="quiz-intro">
+      <p class="eyebrow">ВАШ МАЛЕНЬКИЙ РИТУАЛ</p>
+      <h2 id="quiz-title">Найдите свой<br><em>вкус.</em></h2>
+      <p>Три коротких вопроса — и пара сочетаний из коллекции САДА №17, с которой можно начать.</p>
+      <a class="quiz-text-link" href="#catalog">Или сразу к коллекции <span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="quiz-card" data-quiz-panel>
+      <div class="quiz-card-top">
+        <span class="quiz-step-label" data-quiz-step-label>Шаг 1 из 3</span>
+        <div class="quiz-progress" role="progressbar" aria-label="Прогресс подбора вкуса" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><span data-quiz-progress></span></div>
+      </div>
+      <form class="quiz-form" data-quiz-form novalidate>
+        <div class="quiz-step" data-quiz-step="0"><fieldset><legend>Какое настроение вам ближе?</legend>
+          <label class="quiz-option"><input type="radio" name="mood" value="classic"><span class="quiz-option-copy"><strong>Спокойная классика</strong><small>Чистый яблочный вкус</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+          <label class="quiz-option"><input type="radio" name="mood" value="brightberry"><span class="quiz-option-copy"><strong>Ягодный акцент</strong><small>Сочная кислинка и яркие ноты</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+          <label class="quiz-option"><input type="radio" name="mood" value="texture"><span class="quiz-option-copy"><strong>Интересная текстура</strong><small>Хочется попробовать что-то особенное</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+        </fieldset></div>
+        <div class="quiz-step" data-quiz-step="1" hidden><fieldset><legend>Какое предпочтение учесть?</legend>
+          <label class="quiz-option"><input type="radio" name="sugar" value="any"><span class="quiz-option-copy"><strong>Открыт(а) разным вкусам</strong><small>Можно предложить разные сочетания</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+          <label class="quiz-option"><input type="radio" name="sugar" value="no-added"><span class="quiz-option-copy"><strong>Без добавления сахара</strong><small>Покажите варианты с такой пометкой</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+        </fieldset></div>
+        <div class="quiz-step" data-quiz-step="2" hidden><fieldset><legend>Для какого момента выбираете?</legend>
+          <label class="quiz-option"><input type="radio" name="moment" value="tea"><span class="quiz-option-copy"><strong>К чаю</strong><small>Для неспешной паузы</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+          <label class="quiz-option"><input type="radio" name="moment" value="gift"><span class="quiz-option-copy"><strong>В подарок</strong><small>Небольшое внимание к деталям</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+          <label class="quiz-option"><input type="radio" name="moment" value="onroad"><span class="quiz-option-copy"><strong>С собой в дорогу</strong><small>Компактный формат для паузы в пути</small></span><span class="quiz-radio" aria-hidden="true"></span></label>
+        </fieldset></div>
+        <p class="quiz-validation" data-quiz-validation role="alert" hidden>Выберите один вариант, чтобы продолжить.</p>
+        <div class="quiz-actions"><button class="quiz-button quiz-back" type="button" data-quiz-back hidden>← Назад</button><button class="quiz-button quiz-next" type="button" data-quiz-next disabled>Дальше <span aria-hidden="true">→</span></button><button class="quiz-button quiz-next" type="button" data-quiz-finish hidden>Показать вкусы <span aria-hidden="true">→</span></button></div>
+      </form>
+      <div class="quiz-results" data-quiz-results aria-live="polite" hidden></div>
+      <div class="quiz-load-error" data-quiz-load-error role="alert" hidden><p>Не получилось загрузить коллекцию. Попробуйте ещё раз.</p><button class="quiz-button quiz-next" type="button" data-quiz-retry>Повторить</button></div>
+    </div>
+  </div>
+</section>
+
+    <section id="story" class="story section" aria-labelledby="story-title">
+      <div class="story-image">
+        <img src="assets/demo/editorial-sweets.webp" alt="AI-художественная фотография десерта для вымышленного яблочного ателье" loading="lazy">
+        <span class="image-note">Образ коллекции · САД №17</span>
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">ВЫМЫШЛЕННОЕ ЯБЛОЧНОЕ АТЕЛЬЕ</p>
+        <h2 id="story-title">Ничего лишнего.<br>Кроме удовольствия.</h2>
+        <p>САД №17 — вымышленный бренд и презентационная идея вокруг яблочной пастилы. Мы придумали образ с вниманием к цвету, форме и тихим деталям.</p>
+        <p>В этой концепции вкус встречается с лаконичной упаковкой, а привычная пауза получает свой маленький ритуал.</p>
+        <a class="text-link" href="#catalog">Посмотреть коллекцию <span>›</span></a>
+      </div>
+    </section>
+
+    <section id="gift-studio" class="gift-studio" aria-labelledby="gift-title">
+  <div class="gift-studio__intro">
+    <p class="gift-studio__eyebrow">ТИХИЙ ЖЕСТ · САД №17</p>
+    <h2 id="gift-title">Соберите свой<br><em>подарочный набор.</em></h2>
+    <p class="gift-studio__lede">Выберите формат, наполните коробку любимыми вкусами и сохраните открытку с композицией. Это демонстрационная концепция: заказов и оплаты здесь нет.</p>
+  </div>
+
+  <div class="gift-studio__layout">
+    <div class="gift-studio__builder">
+      <fieldset class="gift-studio__field">
+        <legend>1. Выберите размер коробки</legend>
+        <div class="gift-studio__size" role="group" aria-label="Вместимость набора">
+          <button type="button" class="gift-studio__size-option" data-gift-size="3" aria-pressed="true">3 предмета</button>
+          <button type="button" class="gift-studio__size-option" data-gift-size="5" aria-pressed="false">5 предметов</button>
+        </div>
+      </fieldset>
+
+      <div class="gift-studio__field">
+        <label for="gift-product-select">2. Добавьте вкус</label>
+        <div class="gift-studio__add-row">
+          <select id="gift-product-select" aria-label="Выбрать вкус для набора">
+            <option value="">Загрузка коллекции…</option>
+          </select>
+          <button type="button" class="gift-studio__add-button" data-gift-add>Добавить</button>
+        </div>
+        <p class="gift-studio__hint">Можно выбрать несколько одинаковых вкусов, пока есть свободные места.</p>
+      </div>
+
+      <div class="gift-studio__field">
+        <h3 class="gift-studio__subhead">Состав и количество</h3>
+        <div class="gift-studio__items" data-gift-items aria-live="polite"></div>
+      </div>
+
+      <fieldset class="gift-studio__field">
+        <legend>3. Повод</legend>
+        <div class="gift-studio__occasions">
+          <label><input type="radio" name="gift-occasion" value="Спасибо" checked><span>Спасибо</span></label>
+          <label><input type="radio" name="gift-occasion" value="Для тебя"><span>Для тебя</span></label>
+          <label><input type="radio" name="gift-occasion" value="С праздником"><span>С праздником</span></label>
+        </div>
+      </fieldset>
+
+      <div class="gift-studio__field">
+        <label for="gift-note">4. Личное пожелание <span class="gift-studio__optional">по желанию</span></label>
+        <textarea id="gift-note" maxlength="140" rows="3" placeholder="Тёплые слова в открытке" aria-describedby="gift-note-count"></textarea>
+        <div id="gift-note-count" class="gift-studio__counter" aria-live="polite">0 / 140</div>
+      </div>
+
+      <p class="gift-studio__status" data-gift-status role="status" aria-live="polite"></p>
+      <div class="gift-studio__actions">
+        <button type="button" class="gift-studio__download" data-gift-download>Скачать открытку PNG</button>
+        <button type="button" class="gift-studio__copy" data-gift-copy>Скопировать состав</button>
+        <button type="button" class="gift-studio__reset" data-gift-reset>Начать заново</button>
+      </div>
+    </div>
+
+    <aside class="gift-studio__preview" aria-label="Предпросмотр подарочного набора">
+      <div class="gift-studio__preview-top">
+        <span class="gift-studio__eyebrow">ВАША КОМПОЗИЦИЯ</span>
+        <span class="gift-studio__capacity" data-gift-capacity aria-live="polite">0 из 3 мест</span>
+      </div>
+      <div class="gift-studio__box" data-gift-preview>
+        <div class="gift-studio__box-brand">САД №17<span>ЯБЛОЧНОЕ АТЕЛЬЕ</span></div>
+        <div class="gift-studio__box-content" data-gift-preview-items>
+          <p class="gift-studio__empty">Здесь появится ваш набор.<br>Добавьте первый вкус.</p>
+        </div>
+        <div class="gift-studio__box-greeting" data-gift-greeting>Спасибо</div>
+        <div class="gift-studio__box-note" data-gift-preview-note></div>
+        <div class="gift-studio__box-foot"><span data-gift-mass>Масса: 0 г</span><span>ДЕМО-КОНЦЕПЦИЯ</span></div>
+      </div>
+      <p class="gift-studio__demo-caption">Демонстрационная концепция · САД №17</p>
+    </aside>
+  </div>
+</section>
+
+    <section class="ritual section" aria-labelledby="ritual-title">
+      <p class="eyebrow">МАЛЕНЬКАЯ ПАУЗА</p>
+      <h2 id="ritual-title">Остановиться.<br><em>Насладиться.</em></h2>
+      <div class="ritual-items">
+        <div><span>К ЧАЮ</span><p>Яблочная классика<br>для спокойного вечера.</p></div>
+        <div><span>С СОБОЙ</span><p>Любимое сочетание<br>для короткой паузы.</p></div>
+        <div><span>В ПОДАРОК</span><p>Небольшой знак<br>внимания к деталям.</p></div>
+      </div>
+      <a class="button outline" href="#catalog">Выбрать вкус <span>↘</span></a>
+    </section>
+
+    <section id="where" class="section where" aria-labelledby="where-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">ТРИ ФОРМАТА</p><h2 id="where-title">Для любого<br>повода.</h2></div>
+        <p>Вымышленная коллекция для личного ритуала, подарка и командной идеи.</p>
+      </div>
+      <div class="where-grid">
+        <a class="where-card" href="#catalog"><span class="card-number">01</span><h3>Для себя</h3><p>Выберите сочетание для своей небольшой паузы.</p><span class="card-action">К коллекции ↘</span></a>
+        <a class="where-card" href="#gift-studio"><span class="card-number">02</span><h3>В подарок</h3><p>Соберите набор, добавьте поздравление и сохраните карточку подарка.</p><span class="card-action">Открыть студию подарков ↘</span></a>
+        <a class="where-card" href="#business"><span class="card-number">03</span><h3>Для команды</h3><p>Соберите концепцию внимания для коллег и партнёров.</p><span class="card-action">К форме запроса ↘</span></a>
+      </div>
+    </section>
+
+    <section id="business" class="business section" aria-labelledby="business-title">
+      <div class="business-copy">
+        <p class="eyebrow">ИДЕЯ ДЛЯ СОБЫТИЙ И КОМАНД</p>
+        <h2 id="business-title">Вкусная идея.<br>Красивый жест.</h2>
+        <p>Представьте яблочную коллекцию как камерный подарок, welcome-набор или деталь события. Всё на этой странице — вымышленная концепция для обсуждения идеи.</p>
+        <div class="business-tags"><span>Подарочный набор</span><span>Для команды</span><span>Концепт СТМ</span></div>
+      </div>
+      <form id="business-form">
+        <h3>Собрать текст запроса?</h3>
+        <label>Ваше имя<input name="name" autocomplete="name" placeholder="Как к вам обращаться" required maxlength="100"></label>
+        <label>Команда или проект<input name="company" autocomplete="organization" placeholder="Название проекта" required maxlength="150"></label>
+        <label>Формат идеи<select name="topic"><option>Подарочный набор</option><option>Для команды</option><option>Концепт собственной марки</option></select></label>
+        <label>Комментарий<textarea name="message" rows="2" placeholder="Опишите задумку" maxlength="2000"></textarea></label>
+        <button class="button cream" type="submit">Посмотреть текст запроса <span>↘</span></button>
+        <p class="form-note">Демо-форма показывает только текст концептуального запроса. Данные не сохраняются и никуда не отправляются.</p>
+        <p id="form-status" role="status" aria-live="polite"></p>
+        <textarea id="request-preview" rows="6" readonly hidden aria-label="Предпросмотр текста запроса"></textarea>
+      </form>
+    </section>
+
+    <section class="section questions" aria-labelledby="questions-title">
+      <div><p class="eyebrow">О ДЕМО-КОЛЛЕКЦИИ</p><h2 id="questions-title">Частые вопросы.</h2></div>
+      <div class="faq">
+        <details><summary>Это реальные товары?</summary><p>Нет. САД №17 — вымышленный бренд, а ассортимент и упаковки на странице созданы как презентационная концепция. Покупка и заказ не предлагаются.</p></details>
+        <details><summary>Что означают названия вкусов?</summary><p>Это названия вкусов для демонстрации идеи коллекции. Они не подтверждают состав реального продукта.</p></details>
+        <details><summary>Что означает надпись «без добавления сахара»?</summary><p>Это часть концептуальных названий в демонстрационном каталоге, а не характеристика продаваемого товара или рекомендация по питанию.</p></details>
+        <details><summary>Как отправить запрос?</summary><p>Заполните демо-форму: она покажет текст для ознакомления. Данные не сохраняются и не отправляются; на сайте нет оформления заказа.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <a href="#top" class="brand" aria-label="САД №17 — яблочное ателье, наверх"><span class="brand-symbol" aria-hidden="true">17</span><span>САД №17<small>ЯБЛОЧНОЕ АТЕЛЬЕ</small></span></a>
+      <div><a href="#catalog">Коллекция</a><a href="#taste-finder">Подобрать вкус</a><a href="#gift-studio">Студия подарков</a><a href="#business">Для команды</a></div>
+      <p>Вымышленный бренд<br>Презентационная концепция</p>
+    </div>
+    <div class="footer-bottom">
+      <span>САД №17 · Яблочное ателье</span>
+      <p>AI-изображения и упаковки созданы для демонстрации идеи. Это не реальные товары и не предложение к продаже.</p>
+      <button id="open-sources" type="button">О концепции</button>
+    </div>
+    <div class="footer-legal"><a href="privacy.html">Как работают данные</a><a href="terms.html">О демонстрации</a><button id="clear-preferences" type="button">Сбросить настройки</button><a href="#top">Наверх ↑</a></div>
+  </footer>
+
+  <dialog id="product-dialog" class="product-dialog" aria-label="Концепция вкуса"><button class="close" data-close type="button" aria-label="Закрыть">×</button><div id="product-detail"></div></dialog>
+  <dialog id="selection-dialog" class="selection-dialog" aria-label="Моя подборка"><button class="close" data-close type="button" aria-label="Закрыть">×</button><p class="eyebrow">ВАША ДЕМО-ПОДБОРКА</p><h2>Мой выбор</h2><div id="selection-list"></div><button id="selection-email" class="button primary" type="button">Скопировать подборку</button><p class="catalog-note">Подборка существует только в этой демонстрации. Ничего не заказывается и не отправляется.</p></dialog>
+  <dialog id="sources-dialog" class="sources-dialog" aria-label="О презентационной концепции"><button class="close" data-close type="button" aria-label="Закрыть">×</button><h2>О концепции</h2><p>САД №17 — вымышленный бренд «яблочного ателье», созданный для демонстрации визуальной идеи коллекции пастилы.</p><p>Названия, ассортимент, тексты и упаковки — концептуальные. Фотографии упаковки созданы с помощью ИИ; они не изображают реальные товары.</p><p>Страница не является магазином, офертой или предложением приобрести продукцию.</p></dialog>
+  <div class="compare-bar" id="compare-bar" hidden><span id="compare-count" aria-live="polite"></span><button class="button primary" id="open-compare" type="button">Сравнить вкусы</button><button id="clear-compare" type="button" aria-label="Очистить сравнение">Сбросить</button></div>
+  <dialog id="compare-dialog" aria-label="Сравнение вкусов"><button class="close" data-close type="button" aria-label="Закрыть">×</button><p class="eyebrow">ДЕТАЛИ КОЛЛЕКЦИИ</p><h2>Сравнить вкусы</h2><div id="compare-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

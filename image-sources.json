@@ -1,0 +1,52 @@
+[
+  {
+    "file": "assets/demo/editorial-pastila-apples.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/editorial-sweets.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/pastila-berries-no-sugar.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/pastila-cedar.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/pastila-cherry-no-sugar.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/pastila-classic.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/pastila-cranberry.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/pastila-no-sugar.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/smokva-cranberry.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  },
+  {
+    "file": "assets/demo/zefir-antonovka.webp",
+    "mode": "built-in ImageGen",
+    "purpose": "fictional-brand demo"
+  }
+]
